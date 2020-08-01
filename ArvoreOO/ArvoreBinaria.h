@@ -17,7 +17,7 @@ public:
     virtual ~ArvoreBinaria();
     
     No *raiz;
-
+    void insere (int valor);
 
 
 };
