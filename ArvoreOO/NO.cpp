@@ -19,7 +19,7 @@ NO::NO() {
                                          // começão nulos.
 }
 
-NO::NO(int valor) { //informo ao metodo construtor 
+NO::NO(int valor) { //Passo p metodo construtor valor e nulo para direi e esque 
     this->valor = valor;
     this->direita = this->esquerda = NULL;
 }
