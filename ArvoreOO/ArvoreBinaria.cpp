@@ -22,28 +22,29 @@ ArvoreBinaria::ArvoreBinaria(const ArvoreBinaria& orig) {
 ArvoreBinaria::~ArvoreBinaria() {
 }
 
-bool ArvoreBinaria::vazio() { //metodo para verificar se raiz é nula
+bool ArvoreBinaria::vazio() { //metodo para verificar se raiz é iguala a nula
     return this->raiz == NULL;
 }
 
-void ArvoreBinaria::insere(int valor){ 
-    NO *tmp = this->raiz;
-    NO *ant = NULL;
+void ArvoreBinaria::insere(int valor){ //metodo para inserir
+    NO *tmp = this->raiz; //cria um ponteiro *tmp do tipo NO q recebe esta raiz
+    NO *ant = NULL; //cria um ponteiro *ant do tipo NO q recebe Nulo para troca 
+                    // de valores.
     
-    while (tmp != NULL){
-        ant = tmp;
-        if (tmp->valor < valor)
+    while (tmp != NULL){ //enquanto tmp for diferente de Nulo
+        ant = tmp; //ant recebe o valor de tmp
+        if (tmp->valor < valor)//Se o valor inserido for maior q o valor em tmp 
             tmp = tmp->direita;
         else
             tmp = tmp->esquerda;
     }
-   if (this->vazio()){
-        this->raiz=new NO(valor);
-    }else 
-        if(ant->valor < valor){
-            ant->direita =new NO(valor);
-        }else{
-            ant->esquerda =new NO(valor);
+   if (this->vazio()){//Se o metodo vazio for verdadeiro
+        this->raiz=new NO(valor);//raiz recebe novo valor
+    }else //se não
+        if(ant->valor < valor){//Se valor q foi inserido for maior q valorDE ant
+            ant->direita =new NO(valor);//cria novo NO para direita
+        }else{//Se não 
+            ant->esquerda =new NO(valor);//cria novo NO para esquerda
         }
 }
 
