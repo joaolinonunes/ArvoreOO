@@ -4,8 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
-      <itemPath>ArvoreBinaria.h</itemPath>
-      <itemPath>No.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
@@ -38,10 +36,6 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="ArvoreBinaria.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="No.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -65,10 +59,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="ArvoreBinaria.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="No.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
