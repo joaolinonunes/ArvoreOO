@@ -38,8 +38,8 @@ void ArvoreBinaria::insere(int valor){ //metodo para inserir
         else
             tmp = tmp->esquerda;
     }
-   if (this->vazio()){//Se o metodo vazio for verdadeiro
-        this->raiz=new NO(valor);//raiz recebe novo valor
+   if (this->vazio()){//Se o metodo q verifica se raiz é nulavazio for verdade
+        this->raiz=new NO(valor);//raiz recebe o valor
     }else //se não
         if(ant->valor < valor){//Se valor q foi inserido for maior q valorDE ant
             ant->direita =new NO(valor);//cria novo NO para direita
