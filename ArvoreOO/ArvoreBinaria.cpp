@@ -47,7 +47,7 @@ void ArvoreBinaria::insere(int valor){ //metodo para inserir
             ant->esquerda =new NO(valor);//cria novo NO para esquerda
         }
 }
-
+            //ERD
 void ArvoreBinaria::emOrdem(NO *inicio) {
     if (inicio != NULL) {
         this->emOrdem(inicio->esquerda);   
@@ -55,7 +55,7 @@ void ArvoreBinaria::emOrdem(NO *inicio) {
         this->emOrdem(inicio->direita);
     }
 }
-
+                //EDR
 void ArvoreBinaria::PosOrdem(NO* inicio){
      if (inicio != NULL) {
         this->PosOrdem (inicio->esquerda);   
@@ -63,6 +63,7 @@ void ArvoreBinaria::PosOrdem(NO* inicio){
         cout << inicio->valor << " ";
     }
 }
+                //RED
 void ArvoreBinaria::PreOrdem(NO* inicio){
      if (inicio != NULL) {
         cout << inicio->valor << " ";
