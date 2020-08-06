@@ -22,8 +22,10 @@ public:
     void PreOrdem(NO *inicio);//metodo pre ordem
     void emOrdem (NO *inicio);//metodo em ordem
     void PosOrdem (NO *inicio);//metodo pos ordem
-    int ArvoreBinaria:: Nivel(int valor);
-    int ArvoreBinaria::Nivel(NO *inicio, int valor, int nivel);
+    int Nivel(int valor);
+    int Nivel(NO *inicio, int valor, int nivel);
+    int SomatoriaNos(NO *inicio);
+    int SomatoriaNos2(NO *inicio);
 private:
 
 };

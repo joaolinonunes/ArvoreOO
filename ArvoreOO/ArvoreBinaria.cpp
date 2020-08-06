@@ -73,7 +73,7 @@ void ArvoreBinaria::PreOrdem(NO* inicio){
     }
 }
 
-int ArvoreBinaria:: Nivel(int valor) {
+int ArvoreBinaria::Nivel(int valor) {
  return Nivel (this->raiz, valor, 0);
 }
 
@@ -94,4 +94,24 @@ int ArvoreBinaria::Nivel(NO *inicio, int valor, int nivel) {
 
  return nivel;
  }
+} 
+
+int ArvoreBinaria::SomatoriaNos(NO *inicio) {
+ static int soma=0;
+
+ if (inicio != NULL) {
+ soma+=inicio->valor;
+ this->SomatoriaNos(inicio->esquerda);
+ this->SomatoriaNos(inicio->direita);
+ }
+ return soma;
+}
+
+int ArvoreBinaria::SomatoriaNos2(NO *inicio) {
+ int x=0;
+ if (inicio != NULL) {
+ x=inicio->valor+ this->SomatoriaNos2(inicio->esquerda)+this->SomatoriaNos2(inicio->direita);
+
+ }
+ return x;
 } 
