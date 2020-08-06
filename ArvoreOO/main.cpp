@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 
 cout<<Obj1->SomatoriaNos(Obj1->raiz);
 cout<<Obj1->SomatoriaNos2(Obj1->raiz);
-    
+//cout<<Obj1->noMaior(Obj1->raiz)->valor;    
     
     
     return 0;

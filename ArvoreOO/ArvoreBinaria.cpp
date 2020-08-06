@@ -115,3 +115,13 @@ int ArvoreBinaria::SomatoriaNos2(NO *inicio) {
  }
  return x;
 } 
+
+NO* ArvoreBinaria::noMaior(NO *raiz){
+ NO *temp=NULL;
+ temp = raiz;
+ if(temp->direita== NULL){
+ return temp;
+ } else{
+ return noMaior(raiz->direita);
+ }
+} 

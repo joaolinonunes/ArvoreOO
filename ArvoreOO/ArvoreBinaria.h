@@ -26,6 +26,7 @@ public:
     int Nivel(NO *inicio, int valor, int nivel);
     int SomatoriaNos(NO *inicio);
     int SomatoriaNos2(NO *inicio);
+    NO* noMaior(NO *raiz);
 private:
 
 };
