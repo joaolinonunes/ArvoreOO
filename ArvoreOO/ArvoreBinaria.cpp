@@ -73,9 +73,9 @@ void ArvoreBinaria::PreOrdem(NO* inicio){
     }
 }
     //metodo para encontrar o nivel de um valor
-int ArvoreBinaria::Nivel(int valor) { //recebe o valor como parametro 
+int ArvoreBinaria::Nivel(int valor) { //recebe o valor inserido como parametro 
  return Nivel (this->raiz, valor, 0);//passa para o metodo Nivel com parametros 
-                          //o valor da raiz,o valor passado e zero para o nivel
+                          //o valor da raiz,o valor inserido e zero para o nivel
 }
         // passa para este metodo
 int ArvoreBinaria::Nivel(NO *inicio, int valor, int nivel) {
@@ -94,7 +94,7 @@ int ArvoreBinaria::Nivel(NO *inicio, int valor, int nivel) {
                                 //direito e vai somando o nivel até o valor passado
  }
 
- return nivel;
+ return nivel;//depois de encontrar o valor,retorna o nivel
  }
 } 
 
