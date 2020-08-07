@@ -24,9 +24,12 @@ public:
     void PosOrdem (NO *inicio);//metodo pos ordem
     int Nivel(int valor);
     int Nivel(NO *inicio, int valor, int nivel);
+    int Altura();
+    int Altura(NO *inicio);
     int SomatoriaNos(NO *inicio);
     int SomatoriaNos2(NO *inicio);
     NO* noMaior(NO *raiz);
+    int Busca (NO *inicio, int valor);
 private:
 
 };

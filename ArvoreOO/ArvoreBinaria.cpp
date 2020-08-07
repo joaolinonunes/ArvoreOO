@@ -72,29 +72,50 @@ void ArvoreBinaria::PreOrdem(NO* inicio){
         
     }
 }
-
-int ArvoreBinaria::Nivel(int valor) {
- return Nivel (this->raiz, valor, 0);
+    //metodo para encontrar o nivel de um valor
+int ArvoreBinaria::Nivel(int valor) { //recebe o valor como parametro 
+ return Nivel (this->raiz, valor, 0);//passa para o metodo Nivel com parametros 
+                          //o valor da raiz,o valor passado e zero para o nivel
 }
-
+        // passa para este metodo
 int ArvoreBinaria::Nivel(NO *inicio, int valor, int nivel) {
- if (!inicio)
- return -1;
- else {
- if (valor == inicio->valor)
- return nivel;
- else {
- ++nivel;
+ if (!inicio)//sem inicio a arvore binaria é nula
+ return -1;//então retorna -1
+ else {//se não
+ if (valor == inicio->valor)//se o valor passado for igual ao valor da raiz
+ return nivel;//retorna o nivel que no caso é 0
+ else {// se não
+ ++nivel;//o nivel conta mais um
 
- if (valor < inicio->valor)
- nivel = Nivel (inicio->esquerda, valor, nivel);
- else if (valor > inicio->valor)
- nivel = Nivel (inicio->direita, valor, nivel);
+ if (valor < inicio->valor)//se o valor passado for menor que a raiz busca de forma
+ nivel = Nivel (inicio->esquerda, valor, nivel);//recursiva do lado esquerdo
+ else if (valor > inicio->valor)//senão se o valor passado for maior que a raiz
+ nivel = Nivel (inicio->direita, valor, nivel);//busca de forma recursiva do lado
+                                //direito e vai somando o nivel até o valor passado
  }
 
  return nivel;
  }
 } 
+
+int ArvoreBinaria::Altura() {
+ return Altura (this->raiz);
+} 
+
+int ArvoreBinaria::Altura(NO *inicio) {
+ if (!inicio)
+ return -1;
+ else {
+ int alturaesquerda, alturadireita;
+ alturaesquerda = Altura (inicio->esquerda);
+ alturadireita = Altura (inicio->direita);
+
+ if (alturaesquerda < alturadireita)
+ return alturadireita + 1;
+ else
+ return alturaesquerda + 1;
+ }
+}
 
 int ArvoreBinaria::SomatoriaNos(NO *inicio) {
  static int soma=0;
@@ -124,4 +145,16 @@ NO* ArvoreBinaria::noMaior(NO *raiz){
  } else{
  return noMaior(raiz->direita);
  }
+} 
+
+int ArvoreBinaria::Busca (NO *inicio, int valor) {
+ while (inicio != NULL) {
+ if (valor == inicio->valor)
+ return inicio->valor;
+ else if (valor < inicio->valor)
+ inicio = inicio->esquerda;
+ else
+ inicio = inicio->direita;
+ }
+ return 0;
 } 

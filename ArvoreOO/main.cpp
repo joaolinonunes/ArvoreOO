@@ -25,9 +25,11 @@ int main(int argc, char** argv) {
  Obj1->insere(7);
  Obj1->insere(8);
 
-cout<<Obj1->SomatoriaNos(Obj1->raiz);
-cout<<Obj1->SomatoriaNos2(Obj1->raiz);
-//cout<<Obj1->noMaior(Obj1->raiz)->valor;    
+//cout<<Obj1->Nivel(2)<<endl;
+//cout<<Obj1->Altura();
+//cout<<Obj1->SomatoriaNos(Obj1->raiz);
+//cout<<Obj1->SomatoriaNos2(Obj1->raiz);
+ //cout<<Obj1->noMaior(Obj1->raiz)->valor;    
     
     
     return 0;
