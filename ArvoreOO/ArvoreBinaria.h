@@ -30,6 +30,9 @@ public:
     int SomatoriaNos2(NO *inicio);
     NO* noMaior(NO *raiz);
     int Busca (NO *inicio, int valor);
+    int pesquiSeque(int A[],int valor);
+    int Bolha(int A[]);
+    int PesquisaBinaria (int valor);
 private:
 
 };

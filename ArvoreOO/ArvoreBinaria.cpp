@@ -158,3 +158,44 @@ int ArvoreBinaria::Busca (NO *inicio, int valor) {
  }
  return 0;
 } 
+
+
+int ArvoreBinaria::pesquiSeque (int A[],int valor){
+    int n = 10;
+    for(int i=1;i<n;i++){
+        if(A[i]==valor)
+            return i;
+    }
+   
+}
+
+int ArvoreBinaria::Bolha(int A[]) {
+int i, j, temp, n = 10;
+    for (i= n-1; i >= 1; i--) {
+        for (j= 0; j < i ;j++) {
+            if (A[j] < A[j+1]) {
+                temp = A[j];
+                A[j] = A[j+1];
+                A[j+1] = temp;
+            }
+        }
+    }
+return A[10];
+}
+
+int ArvoreBinaria::PesquisaBinaria (int valor){
+ int inf,sup,meio,N;
+ N=10;
+ inf=0;
+ sup=N-1;
+ while (inf<=sup){
+ meio=(inf+sup)/2;
+ if (valor==B[meio])
+ return meio;
+ else if (valor<B[meio])
+ sup=meio-1;
+ else
+ inf=meio+1;
+ }
+ return -1; /* não encontrado */
+}
