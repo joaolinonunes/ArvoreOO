@@ -169,33 +169,32 @@ int ArvoreBinaria::pesquiSeque (int A[],int valor){
    
 }
 
-int ArvoreBinaria::Bolha(int A[]) {
-int i, j, temp, n = 10;
-    for (i= n-1; i >= 1; i--) {
-        for (j= 0; j < i ;j++) {
-            if (A[j] < A[j+1]) {
-                temp = A[j];
-                A[j] = A[j+1];
-                A[j+1] = temp;
-            }
-        }
-    }
-return A[10];
-}
 
-int ArvoreBinaria::PesquisaBinaria (int valor){
- int inf,sup,meio,N;
+
+int ArvoreBinaria::PesquisaBinaria (int *A,int valor){
+ int m,i,N, j, temp;
+ int inf = 0;
  N=10;
- inf=0;
- sup=N-1;
- while (inf<=sup){
- meio=(inf+sup)/2;
- if (valor==B[meio])
- return meio;
- else if (valor<B[meio])
- sup=meio-1;
- else
- inf=meio+1;
- }
- return -1; /* não encontrado */
+
+  for(int i=0;i<N;i++){
+    for(int i=0;i<N;i++){
+        if (A[i] > A[i+1]){
+            temp = A[i];
+            A[i] = A[i+1];
+            A[i+1] = temp;  
+        }
+    }   
+    }
+ m = N/2;
+ do {
+    
+    if (valor == A[m]){
+        return m;
+        inf = 1;
+    }else if (valor<A[m])
+        --m;
+    else
+        ++m;
+ }while (inf != 1);
+
 }

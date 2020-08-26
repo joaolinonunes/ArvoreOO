@@ -32,7 +32,7 @@ public:
     int Busca (NO *inicio, int valor);
     int pesquiSeque(int A[],int valor);
     int Bolha(int A[]);
-    int PesquisaBinaria (int valor);
+    int PesquisaBinaria (int *A,int valor);
 private:
 
 };
